@@ -1,0 +1,20 @@
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\bin\Debug\Chinese zodiac.exe.config
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\bin\Debug\Chinese zodiac.exe
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\bin\Debug\Chinese zodiac.pdb
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese_zodiac.Form1.resources
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese_zodiac.Properties.Resources.resources
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.csproj.GenerateResource.cache
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.csproj.CoreCompileInputs.cache
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.exe
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.pdb
+C:\Users\Ferr\source\repos\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.csprojAssemblyReference.cache
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\bin\Debug\Chinese zodiac.exe.config
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\bin\Debug\Chinese zodiac.exe
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\bin\Debug\Chinese zodiac.pdb
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.csprojAssemblyReference.cache
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese_zodiac.Form1.resources
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese_zodiac.Properties.Resources.resources
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.csproj.GenerateResource.cache
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.csproj.CoreCompileInputs.cache
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.exe
+C:\Users\Ferr\source\Chinese zodiac\Chinese zodiac\obj\Debug\Chinese zodiac.pdb

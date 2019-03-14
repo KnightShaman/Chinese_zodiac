@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>1	甲 Yang Wood	子 Rat
+2	乙 Yin Wood	丑 Ox
+3	丙 Yang Fire	寅 Tiger
+4	丁 Yin Fire	卯 Rabbit
+5	戊 Yang Earth	辰 Dragon
+6	己 Yin Earth	巳 Snake
+7	庚 Yang Metal	午 Horse
+8	辛 Yin Metal	未 Goat
+9	壬 Yang Water	申 Monkey
+10	癸 Yin Water	酉 Rooster
+11	甲 Yang Wood	戌 Dog
+12	乙 Yin Wood	亥 Pig
+13	丙 Yang Fire	子 Rat
+14	丁 Yin Fire	丑 Ox
+15	戊 Yang Earth	寅 Tiger
+16	己 Yin Earth	卯 Rabbit
+17	庚 Yang Metal	辰 Dragon
+18	辛 Yin Metal	巳 Snake
+19	壬 Yang Water	午 Horse
+20	癸 Yin Water	未 Goat
+21	甲 Yang Wood	申 Monkey
+22	乙 Yin Wood	酉 Rooster
+23	丙 Yang Fire	戌 Dog
+24	丁 Yin Fire	亥 Pig
+25	戊 Yang Earth	子 Rat
+26	己 Yin Earth	丑 Ox
+27	庚 Yang Metal	寅 Tiger
+28	辛 Yin Metal	卯 Rabbit
+29	壬 Yang Water	辰 Dragon
+30	癸 Yin Water	巳 Snake
+</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>31	甲 Yang Wood	午 Horse
+32	乙 Yin Wood	未 Goat
+33	丙 Yang Fire	申 Monkey
+34	丁 Yin Fire	酉 Rooster
+35	戊 Yang Earth	戌 Dog
+36	己 Yin Earth	亥 Pig
+37	庚 Yang Metal	子 Rat
+38	辛 Yin Metal	丑 Ox
+39	壬 Yang Water	寅 Tiger
+40	癸 Yin Water	卯 Rabbit
+41	甲 Yang Wood	辰 Dragon
+42	乙 Yin Wood	巳 Snake
+43	丙 Yang Fire	午 Horse
+44	丁 Yin Fire	未 Goat
+45	戊 Yang Earth	申 Monkey
+46	己 Yin Earth	酉 Rooster
+47	庚 Yang Metal	戌 Dog
+48	辛 Yin Metal	亥 Pig
+49	壬 Yang Water	子 Rat
+50	癸 Yin Water	丑 Ox
+51	甲 Yang Wood	寅 Tiger
+52	乙 Yin Wood	卯 Rabbit
+53	丙 Yang Fire	辰 Dragon
+54	丁 Yin Fire	巳 Snake
+55	戊 Yang Earth	午 Horse
+56	己 Yin Earth	未 Goat
+57	庚 Yang Metal	申 Monkey
+58	辛 Yin Metal	酉 Rooster
+59	壬 Yang Water	戌 Dog
+60	癸 Yin Water	亥 Pig
+</value>
+  </data>
+</root>

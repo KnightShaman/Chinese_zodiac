@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinese zodiac", "Chinese zodiac\Chinese zodiac.csproj", "{B68B1401-20DB-4AF3-ABA5-F22C01284954}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B68B1401-20DB-4AF3-ABA5-F22C01284954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68B1401-20DB-4AF3-ABA5-F22C01284954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68B1401-20DB-4AF3-ABA5-F22C01284954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B68B1401-20DB-4AF3-ABA5-F22C01284954}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DB56835-3680-4888-9A57-83CD5A32D3C4}
+	EndGlobalSection
+EndGlobal
