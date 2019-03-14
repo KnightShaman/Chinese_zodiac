@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Chinese_zodiac
 {
-   // enum elements { wood, fire, earth, gold, water };
+   
     public partial class Form1 : Form
     {
         public Form1()
@@ -21,13 +21,12 @@ namespace Chinese_zodiac
         private void Form1_Load(object sender, EventArgs e)
         {
             label2.Visible = false;
-            button1.Enabled = false;
-            //    enum elements { wood, fire, earth, gold, water };
+           // button1.Enabled = false;
             textBox1.MaxLength = 5;
             textBox1.Focus();
     }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //calculation functional
         {
             int year = Convert.ToInt32(textBox1.Text);
             int i ;
@@ -57,19 +56,37 @@ namespace Chinese_zodiac
 
 
 
-        }
+        } 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // 0, 0-4 is a bug , ad\bc choise and textbox click is a bug,
-            
+            // 0-4 is a bug 
+
+            label2.Visible = false; // hides previous result
 
             if ( textBox1.Text.Length > 0 ) 
                 
             {
-               // try textBox1.Text.Convert.ToInt32();
+                
 
-                label1.Visible = false;
+                if (Convert.ToInt32(textBox1.Text) == 0)
+                {
+                    checkBox1.Checked = false;
+                    checkBox2.Checked = false;
+                    checkBox1.Enabled = false;
+                    checkBox2.Enabled = false;
+                    label1.Visible = true;
+                    label1.Text = "there is no zero year";
+                }
+                else
+                {
+                    label1.Text = "type year above";
+                    label1.Visible = false;
+                    checkBox1.Enabled = true;
+                    checkBox2.Enabled = true;
+                }
+
+                    
                 if ((checkBox2.Checked == true) && (checkBox1.Checked == true))
                 {
                     button1.Enabled = false;
@@ -91,17 +108,10 @@ namespace Chinese_zodiac
             }
             
         }
-
-        
-
-       
-
+             
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
-            {
-                checkBox1.Checked = false;
-            }
+            
             
             if ((textBox1.Text.Length > 0) && (checkBox2.Checked == true) && (checkBox1.Checked == false))
             {
@@ -113,12 +123,12 @@ namespace Chinese_zodiac
                 button1.Enabled = true;
                 label5.Visible = false;
             }
-          
             else
             {
                 button1.Enabled = false;
             }
-            if ((checkBox1.Checked) || (checkBox2.Checked))
+
+            if ((checkBox1.Checked) || (checkBox2.Checked)) //hide select era text
             {
                 label5.Visible = false;
             }
@@ -130,11 +140,7 @@ namespace Chinese_zodiac
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked == true)
-            {
-                checkBox2.Checked = false;
-            }
-
+            
             if ((textBox1.Text.Length > 0) && (checkBox1.Checked == true) && (checkBox2.Checked == false))
             {
                 button1.Enabled = true;
@@ -145,12 +151,12 @@ namespace Chinese_zodiac
                 button1.Enabled = true;
                 
             }
-            
             else
             {
                 button1.Enabled = false;
             }
-            if ((checkBox1.Checked) || (checkBox2.Checked))
+
+            if ((checkBox1.Checked) || (checkBox2.Checked)) //hide select era text
             {
                 label5.Visible = false;
             }
@@ -159,7 +165,7 @@ namespace Chinese_zodiac
                 label5.Visible = true;
             }
         }
-        // results list to display
+
         private void RsultToLabel(int reminder)
         {
             switch (reminder)
@@ -353,22 +359,38 @@ namespace Chinese_zodiac
                     break;
             }
 
-        }
+        } // results list to display
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Convert.ToInt32(e.KeyChar) == 13)
             {
-                button1.PerformClick();
+                button1.PerformClick(); // execute button1 code on Enter key pressed in textbox
 
             }
 
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) //allow only digits
             {
                 e.Handled = true;
             }
         }
 
-        
+        private void checkBox2_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                checkBox1.Checked = false;
+                checkBox2.Checked = true;
+            }
+        } // allow only 1 checked box at a time
+
+        private void checkBox1_Click(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                checkBox2.Checked = false;
+                checkBox1.Checked = true;
+            }
+        } // allow only 1 checked box at a time
     }
 }
