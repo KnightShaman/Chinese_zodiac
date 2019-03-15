@@ -90,7 +90,7 @@ namespace Chinese_zodiac
             {
 
                 int input;
-                if (Int32.TryParse(textBox1.Text, out input) == true) // for ctrl + shift not to cause a bug
+                if (Int32.TryParse(textBox1.Text, out input) ) // for ctrl + shift not to cause a bug
                 {
                     input = Convert.ToInt32(textBox1.Text);
                 }
