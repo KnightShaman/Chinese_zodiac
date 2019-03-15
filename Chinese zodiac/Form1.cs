@@ -82,8 +82,10 @@ namespace Chinese_zodiac
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
             label2.Visible = false; // hides previous result
+            label2.ForeColor = BackColor;
+            label2.BackColor = Color.Transparent;
 
             if (textBox1.Text.Length > 0)
 
@@ -176,9 +178,9 @@ namespace Chinese_zodiac
             {
                         button1.Enabled = false;
                         label1.Visible = true;
-                    }
-
-                }
+            }
+           
+        }
              
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
@@ -371,7 +373,7 @@ namespace Chinese_zodiac
                     label2.Text = "己 Yin Earth 亥 Pig";
                     break;
                 case 37:
-                    label2.Text = "庚 Yang Metal 子 Rat";
+                    label2.Text = "庚 Yang Metal 子 Rat"; //
                     break;
                 case 38:
                     label2.Text = "辛 Yin Metal 丑 Ox";
@@ -446,6 +448,34 @@ namespace Chinese_zodiac
                     break;
                 default: 
                     break;
+
+                    
+            }
+
+            if (label2.Text.Contains("Water"))
+            {
+                label2.BackColor = Color.Black;
+                label2.ForeColor = Color.White;
+            }
+            if (label2.Text.Contains("Metal"))
+            {
+                label2.BackColor = Color.White;
+                label2.ForeColor = Color.Black;
+            }
+            if (label2.Text.Contains("Wood"))
+            {
+                label2.BackColor = Color.Blue;
+                label2.ForeColor = Color.White;
+            }
+            if (label2.Text.Contains("Fire"))
+            {
+                label2.BackColor = Color.Red;
+                label2.ForeColor = Color.Black;
+            }
+            if (label2.Text.Contains("Earth"))
+            {
+                label2.BackColor = Color.Yellow;
+                label2.ForeColor = Color.Black;
             }
 
         } // results list to display
