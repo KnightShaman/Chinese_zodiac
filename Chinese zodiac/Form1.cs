@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Chinese_zodiac
 {
-   
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -21,116 +21,164 @@ namespace Chinese_zodiac
         private void Form1_Load(object sender, EventArgs e)
         {
             label2.Visible = false;
-           // button1.Enabled = false;
             textBox1.MaxLength = 5;
             textBox1.Focus();
-    }
+
+        }
 
         private void button1_Click(object sender, EventArgs e) //calculation functional
         {
-            int year = Convert.ToInt32(textBox1.Text);
-            int i ;
+
+            int i;
             int reminder;
-            if (checkBox2.Checked == true)
+            int year;
+            if (Int32.TryParse(textBox1.Text, out year) == true)
             {
-                i = ((Math.Abs(year) + 2) / 60 );
-                reminder = ((Math.Abs(year)+ 2) - (60 * i));
-                i = 60 - reminder;
+                year = Convert.ToInt32(textBox1.Text);
+
+                if (checkBox2.Checked == true)
+                {
+                    i = ((Math.Abs(year) + 2) / 60);
+                    reminder = ((Math.Abs(year) + 2) - (60 * i));
+                    i = 60 - reminder;
 
 
-                /* uncomment to test result 
-                string Text = reminder.ToString();
-                MessageBox.Show(Text); 
-                */
+                    /* uncomment to test result 
+                    string Text = reminder.ToString();
+                    MessageBox.Show(Text); 
+                    */
 
-                label2.Visible = true;
-                RsultToLabel(reminder);
+                    label2.Visible = true;
+                    RsultToLabel(reminder);
+                }
+                else if (checkBox1.Checked == true)
+                {
+                    i = (year - 3) / 60;
+                    reminder = (year - 3) - (60 * i);
+
+                    /* uncomment to test result 
+                    string Text = reminder.ToString();
+                    MessageBox.Show(Text); 
+                    */
+
+                    label2.Visible = true;
+                    RsultToLabel(reminder);
+                }
             }
-            else if (checkBox1.Checked == true)
+            else
             {
-                i = (year - 3) / 60;
-                reminder = (year - 3) - (60 * i);
-
-                /* uncomment to test result 
-                string Text = reminder.ToString();
-                MessageBox.Show(Text); 
-                */   
-                
-                label2.Visible = true;
-                RsultToLabel(reminder);
+                label1.Visible = true;
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
+                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
+                button1.Enabled = false;
+                string errmsg = "Wrong input!";
+                MessageBox.Show(errmsg);
+                textBox1.Text = textBox1.Text.Remove(0);
 
             }
-
-
-
-
-        } 
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // 1-4 is a bug 
-
+            
             label2.Visible = false; // hides previous result
 
-            if ( textBox1.Text.Length > 0 ) 
-                
+            if (textBox1.Text.Length > 0)
+
             {
-                int input = Convert.ToInt32(textBox1.Text);
-                if (Convert.ToInt32(textBox1.Text) == 0)
+
+                int input;
+                if (Int32.TryParse(textBox1.Text, out input) == true) // for ctrl + shift not to cause a bug
                 {
+                    input = Convert.ToInt32(textBox1.Text);
+                }
+                else
+                {
+                    label1.Visible = true;
                     checkBox1.Checked = false;
                     checkBox2.Checked = false;
                     checkBox1.Enabled = false;
                     checkBox2.Enabled = false;
-                    label1.Visible = true;
-                    label1.Text = "there is no zero year";
-                }
-                else
-                {
-                    label1.Text = "type year above";
-                    label1.Visible = false;
-                    checkBox1.Enabled = true;
-                    checkBox2.Enabled = true;
-                }
-                switch (input)
-                {
-                    case 1:
-                        label2.Text = "辛 Yin Metal 酉 Rooster";
-                        break;
-                    case 2:
-                        label2.Text = "壬 Yang Water 戌 Dog";
-                        break;
-                    case 3:
-                        label2.Text = "癸 Yin Water 亥 Pig";
-                        break;
-
-                    default:
-                        break;
-                }
-
-
-                    
-                if ((checkBox2.Checked == true) && (checkBox1.Checked == true))
-                {
                     button1.Enabled = false;
+                    string errmsg = "Wrong input!";
+                    MessageBox.Show(errmsg);
+                    textBox1.Text = textBox1.Text.Remove(0);
                 }
-                else if ((checkBox2.Checked == false) && (checkBox1.Checked == false))
-                {
-                    button1.Enabled = false;
-                }
-                else
-                {
-                    button1.Enabled = true;
-                }
-            }
 
+                if (Int32.TryParse(textBox1.Text, out input))
+                {
+
+                    if (Convert.ToInt32(textBox1.Text) == 0)
+                    {
+                        checkBox1.Checked = false;
+                        checkBox2.Checked = false;
+                        checkBox1.Enabled = false;
+                        checkBox2.Enabled = false;
+                        label1.Visible = true;
+                        label1.Text = "there is no zero year";
+                    }
+                    else
+                    {
+                        label1.Text = "type year above";
+                        label1.Visible = false;
+                        checkBox1.Enabled = true;
+                        checkBox2.Enabled = true;
+                    }
+                
+                //else
+                //{ 
+                //    label1.visible = true;
+                //    checkbox1.checked = false;
+                //    checkbox2.checked = false;
+                //    checkbox1.enabled = false;
+                //    checkbox2.enabled = false;
+                //    button1.enabled = false;
+                //    string errmsg = "wrong input!";
+                //    messagebox.show(errmsg);
+                //    textbox1.text = textbox1.text.remove(0);
+                // }
+
+                    }
+                    switch (input)
+                    {
+                        case 1:
+                            label2.Text = "辛 Yin Metal 酉 Rooster";
+                            break;
+                        case 2:
+                            label2.Text = "壬 Yang Water 戌 Dog";
+                            break;
+                        case 3:
+                            label2.Text = "癸 Yin Water 亥 Pig";
+                            break;
+
+                        default:
+                            break;
+                    }
+
+
+
+                    if ((checkBox2.Checked == true) && (checkBox1.Checked == true))
+                    {
+                        button1.Enabled = false;
+                    }
+                    else if ((checkBox2.Checked == false) && (checkBox1.Checked == false))
+                    {
+                        button1.Enabled = false;
+                    }
+                    else
+                    {
+                        button1.Enabled = true;
+                    }
+                    }
             else
             {
-                button1.Enabled = false;
-                label1.Visible = true;
-            }
-            
-        }
+                        button1.Enabled = false;
+                        label1.Visible = true;
+                    }
+
+                }
              
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
@@ -416,6 +464,6 @@ namespace Chinese_zodiac
             }
         }
 
-        
+       
     }
 }
